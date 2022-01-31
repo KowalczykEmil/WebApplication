@@ -1,2 +1,6 @@
-package com.kowalczykemil.user;public interface UserRepository {
+package com.kowalczykemil.user;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Integer> {
 }
