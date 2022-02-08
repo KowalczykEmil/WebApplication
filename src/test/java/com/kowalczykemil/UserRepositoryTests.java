@@ -56,7 +56,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testGet(){
-        Integer userId = 2;
+        Integer userId = 1;
         Optional<User> optionalUser = repo.findById(userId);
         User user = optionalUser.get();
 
