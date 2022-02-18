@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org":>
 <head>
     <meta charset="UTF-8">
-    <title>Dodaj użytkownika</title>
+    <title>[[${pageTitle}]]</title>
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
 </head>
 <body>
 <div class="container-fluid">
-    <div><h2 class="text-center">Dodaj użytkownika </h2></div>
+    <div><h2 class="text-center">[[${pageTitle}]] </h2></div>
 
     <form th:action="@{/users/save}" method="post" th:object="${user}"
         style="max-width: 500px; margin: 0 auto;">
+        <input type="hidden" th:field="*{id}">
         <div class="border border-secondary rounded p-3">
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label">E-mail:</label>
